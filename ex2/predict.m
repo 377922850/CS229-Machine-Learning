@@ -16,10 +16,16 @@ p = zeros(m, 1);
 %
 
 
-p(find(X*theta >= 0.5)) = 1;
-p(find(X*theta < 0.5)) = 0;
+p(find(sigmoid(X*theta) >= 0.5)) = 1;
+p(find(sigmoid(X*theta) < 0.5)) = 0;
 
-
+% hx = sigmoid(X*theta);
+% for iter = 1:m
+	% if hx(iter) >= 0.5
+		% p(iter) = 1;
+	% else
+		% p(iter) = 0;
+	% end
 
 
 % =========================================================================
