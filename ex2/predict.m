@@ -16,7 +16,8 @@ p = zeros(m, 1);
 %
 
 
-
+p(find(X*theta >= 0.5)) = 1;
+p(find(X*theta < 0.5)) = 0;
 
 
 
