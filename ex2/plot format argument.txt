@@ -1,0 +1,39 @@
+Format arguments:
+    linestyle
+          '-'  Use solid lines (default).
+          '--' Use dashed lines.`
+          ':'  Use dotted lines.
+          '-.' Use dash-dotted lines.
+    markerstyle
+          '+'  crosshair
+          'o'  circle
+          '*'  star
+          '.'  point
+          'x'  cross
+          's'  square
+          'd'  diamond
+          '^'  upward-facing triangle
+          'v'  downward-facing triangle
+          '>'  right-facing triangle
+          '<'  left-facing triangle
+          'p'  pentagram
+          'h'  hexagram
+    color
+          'k'  blacK
+          'r'  Red
+          'g'  Green
+          'b'  Blue
+          'm'  Magenta
+          'c'  Cyan
+          'w'  White 
+		  
+Useful properties to modify are 
+		"linestyle",
+		"linewidth",
+		"color", 
+		"marker", 
+		"markersize", 
+		"markeredgecolor",
+		"markerfacecolor".		  
+		  
+		  
