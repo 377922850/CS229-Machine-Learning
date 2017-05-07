@@ -42,6 +42,11 @@ sel = sel(1:100);
 
 displayData(X(sel, :));
 
+% rand_indices = randperm(m);      m=5000
+% sel = X(rand_indices(1:100), :);
+
+% displayData(sel);
+
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
