@@ -62,11 +62,25 @@ Theta2_grad = zeros(size(Theta2));
 %               and Theta2_grad from Part 2.
 %
 
+%Feedforward
+a1 = [ones(m,1) X];
+z2 = a1 * Theta1';     
+a2 = [ones(m,1) sigmoid(z2)];
+z3 = a2 * Theta2';
+hx = sigmoid(z3);          
+
+y_vect = zeros(m,num_labels);
+for i=1:num_labels
+	y_vect(:,i) = (y==i); 
+end;
+	
+J = (-1/m) * (sum(sum(log(hx).*y_vect)) + sum(sum(log(1-hx).*(1-y_vect))));
 
 
 
-
-
+%backpropagation algorithm
+delta3 = a3 - y_vect;
+delta2 = 
 
 
 
