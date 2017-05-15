@@ -63,10 +63,10 @@ Theta2_grad = zeros(size(Theta2));
 %
 
 %Feedforward
-a1 = [ones(m,1) X];
-z2 = a1 * Theta1';     
-a2 = [ones(m,1) sigmoid(z2)];
-z3 = a2 * Theta2';
+a1 = [ones(m,1) X];               %5000*401
+z2 = a1 * Theta1';                %5000*25
+a2 = [ones(m,1) sigmoid(z2)];     %5000*26
+z3 = a2 * Theta2';                %5000*10
 hx = sigmoid(z3);          
 
 y_vect = zeros(m,num_labels);
@@ -74,16 +74,26 @@ for i=1:num_labels
 	y_vect(:,i) = (y==i); 
 end;
 	
-J = (-1/m) * (sum(sum(log(hx).*y_vect)) + sum(sum(log(1-hx).*(1-y_vect))));
+J = (-1/m) * (sum(sum(log(hx).*y_vect)) + sum(sum(log(1-hx).*(1-y_vect)))) 
 
+J = J + (lambda/2/m)*(sum(sum(Theta1(:,2:end).^2)) + sum(sum(Theta2(:,2:end).^2)));
 
-
+Delta1 = zeros(size(Theta1));       %25*401
+Delta2 = zeros(size(Theta2));       %10*26
 %backpropagation algorithm
-delta3 = a3 - y_vect;
-delta2 = 
 
+delta3 = hx - y_vect;               %5000*10
+delta2 = (delta3*Theta2)(:,2:end).*sigmoidGradient(z2);
+Delta2 = delta3'*a2;	
+Delta1 = delta2'*a1;
 
+Theta1_grad = Delta1/m;             %25*401
+Theta2_grad = Delta2/m;             %10*26
 
+%regularization gradient  
+Theta1_grad(:,2:end) = Theta1_grad(:,2:end) + lambda*Theta1(:,2:end)/m;
+Theta2_grad(:,2:end) = Theta2_grad(:,2:end) + lambda*Theta2(:,2:end)/m;
+  
 
 
 
