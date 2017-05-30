@@ -98,10 +98,11 @@ while ~isempty(email_contents)
     %
 
 
-
-
-
-
+for index = 1:1899
+	if(strcmp(str, vocabList{index}) == 1)
+		word_indices = [word_indices ; index];
+	end
+end
 
 
 

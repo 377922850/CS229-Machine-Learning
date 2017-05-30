@@ -1,0 +1,27 @@
+Hi @azeros,
+
+Hooray! You've just joined the world's largest community of data scientists! 
+
+Whether you're new to data science or a veteran looking to collaborate with other experts, you're in the right place. You can get started by participating in competitions or collaborating on our open data platform. 
+
+ Competitions
+
+Check out this quick video on how to get started with our competitions.
+
+
+
+Titanic: Machine Learning from Disaster
+New to data science? Start here! Predict survival on the Titanic and get hands-on experience with machine learning fundamentals. Don't miss our popular tutorials.
+House Prices: Advanced Regression Techniques
+Ready to expand your toolkit? Predict house prices and learn advanced regression techniques like random forest and gradient boosting with these tutorials.
+
+Ready to level up? Check out our featured competitions to win cash prizes and start climbing the Kaggle rankings. 
+
+Datasets
+
+You can find and download datasets on a wide variety of subjects on our open data platform. Learn more about how to search for data for your project.
+
+Want to contribute to the open data movement? Publish your own dataset on Kaggle for community collaboration! Read our simple publishing guide to get started.
+
+Happy modeling, 
+Mark
